@@ -22,7 +22,7 @@ allProjectButtons.forEach((button) => {
 
         const projectLink = button.getAttribute("data-link");
 
-        window.open(projectLink, "_blank");
+        window.open(projectLink, " blank");
 
     });
 
