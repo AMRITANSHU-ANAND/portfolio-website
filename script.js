@@ -14,10 +14,16 @@ document.getElementById("servicesBtn").addEventListener("click", function () {
 
 // Project Buttons
 
-const projectButtons = document.querySelectorAll(".project-btn");
+const allProjectButtons = document.querySelectorAll(".project-btn, .live-btn");
 
-projectButtons.forEach((button) => {
+allProjectButtons.forEach((button) => {
+
     button.addEventListener("click", () => {
-        alert("Project Link Coming Soon!");
+
+        const projectLink = button.getAttribute("data-link");
+
+        window.open(projectLink, "_blank");
+
     });
+
 });

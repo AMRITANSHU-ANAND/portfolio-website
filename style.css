@@ -7,9 +7,12 @@
 body {
     font-family: "Poppins", sans-serif;
     background-color: #f5f7fa;
+    color: #222;
 }
 
-/* Navbar */
+/* =========================
+   Navbar
+========================= */
 
 nav {
     display: flex;
@@ -42,13 +45,16 @@ nav ul li a {
     text-decoration: none;
     color: white;
     transition: 0.3s;
+    font-weight: 500;
 }
 
 nav ul li a:hover {
     color: #d1f7e2;
 }
 
-/* Hero Section */
+/* =========================
+   Hero Section
+========================= */
 
 .hero {
     min-height: 90vh;
@@ -86,6 +92,10 @@ nav ul li a:hover {
     margin-top: 25px;
 }
 
+/* =========================
+   Buttons
+========================= */
+
 .btn {
     padding: 12px 24px;
     border: none;
@@ -94,7 +104,8 @@ nav ul li a:hover {
     color: white;
     font-size: 16px;
     cursor: pointer;
-    transition: 0.3s;
+    transition: 0.3s ease;
+    font-weight: 500;
 }
 
 .btn:hover {
@@ -102,16 +113,30 @@ nav ul li a:hover {
     transform: translateY(-2px);
 }
 
+.live-btn {
+    background-color: #1f3c88;
+}
+
+.live-btn:hover {
+    background-color: #14295f;
+}
+
+/* =========================
+   Hero Image
+========================= */
+
 .hero-right img {
     width: 320px;
     height: 320px;
     border-radius: 50%;
     object-fit: cover;
     border: 5px solid white;
-    box-shadow: 0 10px 25px rgba(0,0,0,0.2);
+    box-shadow: 0 10px 25px rgba(0, 0, 0, 0.2);
 }
 
-/* Projects */
+/* =========================
+   Projects Section
+========================= */
 
 .projects {
     padding: 80px 10%;
@@ -127,7 +152,7 @@ nav ul li a:hover {
     background: white;
     padding: 30px;
     border-radius: 20px;
-    box-shadow: 0 5px 15px rgba(0,0,0,0.1);
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
 }
 
 .row-reverse {
@@ -156,31 +181,88 @@ nav ul li a:hover {
     color: #555;
 }
 
-/* Contact */
+.project-buttons {
+    display: flex;
+    gap: 15px;
+    margin-top: 20px;
+    flex-wrap: wrap;
+}
 
-.contact {
-    padding: 80px 10%;
-    text-align: center;
-    background: #111;
+/* =========================
+   Footer
+========================= */
+
+.footer {
+    background: #111827;
     color: white;
+    text-align: center;
+    padding: 60px 10%;
 }
 
-.contact h2 {
-    margin-bottom: 20px;
+.footer h2 {
     font-size: 36px;
+    margin-bottom: 15px;
 }
 
-.contact p {
-    margin: 10px 0;
+.footer-text {
+    color: #d1d5db;
+    margin-bottom: 25px;
+    font-size: 16px;
 }
 
-/* Responsive */
+.footer-links {
+    display: flex;
+    justify-content: center;
+    gap: 25px;
+    margin-bottom: 30px;
+    flex-wrap: wrap;
+}
+
+.footer-links a {
+    text-decoration: none;
+    color: white;
+    background: seagreen;
+    padding: 10px 20px;
+    border-radius: 8px;
+    transition: 0.3s ease;
+}
+
+.footer-links a:hover {
+    background: #166d4b;
+    transform: translateY(-3px);
+}
+
+.copyright {
+    color: #9ca3af;
+    font-size: 14px;
+}
+
+/* =========================
+   Responsive Design
+========================= */
 
 @media (max-width: 900px) {
+
+    nav {
+        flex-direction: column;
+        gap: 15px;
+        padding: 20px;
+    }
+
+    nav ul {
+        flex-wrap: wrap;
+        justify-content: center;
+    }
 
     .hero {
         flex-direction: column;
         text-align: center;
+        padding: 60px 8%;
+    }
+
+    .hero-right img {
+        width: 250px;
+        height: 250px;
     }
 
     .project,
@@ -188,13 +270,27 @@ nav ul li a:hover {
         flex-direction: column;
     }
 
-    nav {
-        flex-direction: column;
-        gap: 15px;
+    .project-info {
+        text-align: center;
     }
 
-    .hero-right img {
-        width: 250px;
-        height: 250px;
+    .project-buttons {
+        justify-content: center;
+    }
+
+    .one {
+        font-size: 34px;
+    }
+
+    .two {
+        font-size: 24px;
+    }
+
+    .project-info .text {
+        font-size: 26px;
+    }
+
+    .footer h2 {
+        font-size: 30px;
     }
 }
